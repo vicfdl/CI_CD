@@ -32,24 +32,26 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        table {
-            width: 100%;
+        .table {
             margin: 20px 0;
-            border-collapse: collapse;
         }
-        table, th, td {
-            border: 1px solid #ddd;
+        /* Custom styles for better visibility on mobile */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+            .content {
+                padding: 15px;
+            }
         }
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background: #333;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background: #f2f2f2;
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 18px;
+            }
+            .content {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -61,41 +63,43 @@
     </header>
     <div class="container">
         <div class="content">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Data</th>
-                        <th>Hora</th>
-                        <th>Adversário</th>
-                        <th>Local</th>
-                        <th>Resultado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Exemplo de jogos -->
-                    <tr>
-                        <td>20/08/2024</td>
-                        <td>21:30</td>
-                        <td>Red Bull Bragantino</td>
-                        <td>Neo Química Arena</td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td>25/08/2024</td>
-                        <td>16:00</td>
-                        <td>Fortaleza</td>
-                        <td>Castelão</td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td>01/09/2024</td>
-                        <td>16:00</td>
-                        <td>Flamengo</td>
-                        <td>Neo Química Arena</td>
-                        <td> - </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Adversário</th>
+                            <th>Local</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Exemplo de jogos -->
+                        <tr>
+                            <td>20/08/2024</td>
+                            <td>21:30</td>
+                            <td>Red Bull Bragantino</td>
+                            <td>Neo Química Arena</td>
+                            <td> - </td>
+                        </tr>
+                        <tr>
+                            <td>25/08/2024</td>
+                            <td>16:00</td>
+                            <td>Fortaleza</td>
+                            <td>Castelão</td>
+                            <td> - </td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>16:00</td>
+                            <td>Flamengo</td>
+                            <td>Neo Química Arena</td>
+                            <td> - </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <!-- Bootstrap JS and dependencies -->
